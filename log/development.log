@@ -493,3 +493,29 @@ Processing by Api::V1::ProductsController#index as JSON
 Completed 200 OK in 18ms (Views: 9.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/api/v1/products" for 127.0.0.1 at 2017-09-29 10:22:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 18ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/products" for 127.0.0.1 at 2017-09-29 10:25:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/products" for 127.0.0.1 at 2017-09-29 10:25:37 -0500
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/products" for 127.0.0.1 at 2017-09-29 10:25:42 -0500
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
