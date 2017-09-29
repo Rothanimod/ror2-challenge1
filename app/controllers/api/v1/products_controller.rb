@@ -6,7 +6,7 @@ class Api::V1::ProductsController < ApplicationController
 
   def index
     products = Product.all
-    render json: {status: 'SUCCESS', message: 'Loaded all posts', data: [products]}, status: :ok
+    render json: {data: products}, status: :ok
 
   end
 end
