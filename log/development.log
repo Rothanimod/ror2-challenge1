@@ -420,3 +420,19 @@ Processing by Api::V1::ProductsController#index as JSON
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/api/v1/products" for 127.0.0.1 at 2017-09-29 10:04:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started GET "/api/v1/products" for 127.0.0.1 at 2017-09-29 10:05:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 17ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
