@@ -11,7 +11,7 @@ class Api::V1::ProductsController < ApiController
      if product.save
        render json: product, status: :created, message: "Product succesfully created!"
      else
-       render json: product.errors.to_json, status: :unprocessable_entity, message: "name cant be blank"
+       render json: { errors: product.errors }, status: 422
      end
   end
 
