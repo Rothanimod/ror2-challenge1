@@ -9,9 +9,9 @@ class Api::V1::ProductsController < ApiController
   def create
     product = Product.create!(product_params)
      if product.save
-       render json: product, status: :created
+       render json: product, status: :created, message: "Product succesfully created!"
      else
-       render json: { errors: product.errors }, status: :unprocessable_entitiy
+       render json: product.errors.to_json, status: :unprocessable_entity, message: "name cant be blank"
      end
   end
 
