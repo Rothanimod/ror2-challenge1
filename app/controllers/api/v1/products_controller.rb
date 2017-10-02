@@ -7,6 +7,7 @@ class Api::V1::ProductsController < ApiController
   end
 
   def create
+    byebug
     product = Product.create!(product_params)
      if product.save
        render json: product, status: :created, message: "Product succesfully created!"
@@ -32,6 +33,6 @@ class Api::V1::ProductsController < ApiController
   end
 
   def product_params
-    params.permit(:name, :price)
+    params.require(:product).permit(:name, :price)
   end
 end
