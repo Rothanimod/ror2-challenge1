@@ -7,11 +7,12 @@ class Api::V1::ProductsController < ApiController
   end
 
   def create
+    byebug
     product = Product.create!(product_params)
      if product.save
        render json: product, status: :created, message: "Product succesfully created!"
      else
-       render json: { errors: product.errors }, status: 422
+       render json: { errors: product.errors }, status: :unprocessable_entity, message: "name cant be blank"
      end
   end
 
