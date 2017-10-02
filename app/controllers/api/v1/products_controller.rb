@@ -9,9 +9,9 @@ class Api::V1::ProductsController < ApiController
   def create
     product = Product.create!(product_params)
      if product.save
-        render json: { product: product, }.to_json, status: :created, message: "Product successfully created!"
+        render json: { product: product }.to_json, status: :created, message: "Product successfully created!"
      else
-        render json: {errors: product.errors, }.to_json, status: :unprocessable_entity, message: "name cant be blank"
+        render json: {errors: product.errors }.to_json, status: :unprocessable_entity, message: "name cant be blank"
      end
   end
 
@@ -20,14 +20,14 @@ class Api::V1::ProductsController < ApiController
     if product.update(product_params)
       render json: product, status: :ok, message: "Product successfully updated!"
     else
-      render json: product.errors, status: :unprocessable_entity, message: "name cant be blank"
+      render json: product.errors.to_json, status: :unprocessable_entity, message: "name cant be blank"
     end
   end
 
   def destroy
     product = Product.find(params[:id])
     if product.destroy
-      render json: {status: :no_content}.to_json
+      head :no_content
     end
   end
 
